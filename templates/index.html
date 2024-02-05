@@ -1,0 +1,93 @@
+{% extends "layout.html" %} {% block body %}
+
+<div class="container">
+    <div class="jumbotron text-center">
+        <h1>Optical Mark Recognition</h1>
+        <hr>
+        <!--<p class="lead">Ahmet KÖKEN</p>-->
+        <a class="btn btn-lg btn-gray" href="uploadAnswerKey" role="button"
+            >Get Started</a
+        >
+    </div>
+    <!--<div class="row text-justify">
+        <div class="col-lg-6 col-xs-12">
+            <h2>Libraries Used</h2>
+            <div class="row">
+                <div class="col-lg-3 col-xs-3">
+                    <br />
+                    <img
+                        src="/static/images/opencv.png"
+                        class="img-fluid"
+                        alt="OpenCV Logo"
+                    />
+                </div>
+                <div class="col-lg-9 col-xs-9">
+                    <h4>OpenCV</h4>
+                    <p>
+                        OpenCV (Open Source Computer Vision), open source image processing library. Intel in 1999 It was later developed by Itseez, Companies and communities such as Willow, Nvidia, AMD, Google With its support, the development process continues.
+                    </p>
+                </div>
+            </div>
+            <br />
+            <div class="row">
+                <div class="col-lg-3 col-xs-3">
+                    <img
+                        src="/static/images/flask.png"
+                        class="img-fluid"
+                        alt="Flask Logo"
+                    />
+                </div>
+                <div class="col-lg-9 col-xs-9">
+                    <h4>Flask</h4>
+                    <p>
+                        Flask, which enables the development of web applications, Werkzueg and a Python microframework based on Jinja. Only Includes basic features but packages on demand It can be expanded with the help of.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-6 col-xs-12">
+            <h2>Algorithm</h2>
+            <ol>
+                <li>The user uploads pictures.</li>
+                <li>
+                    For each picture; With OpenCV, the image is rendered gray before It is made toned.
+                </li>
+                <li>With OpenCV, 5x5 Gauss is implemented.</li>
+                <li>
+                    With the help of OpenCV, the Canny edge finding algorithm is implemented.
+                </li>
+                <li>
+                    The shape with four sides is selected and the name and surname written in it The area with information is obtained and clarified.
+                </li>
+                <li>
+                    A threshold value is applied on the gray image, and the picture It is converted to negative. In this way, the marked areas are white pixels, unmarked areas become black pixels.
+                </li>
+                <li>
+                    With the help of Imutils, all shapes are taken and for each shape The aspect ratio of the inclusive quadrilateral is calculated.
+                </li>
+                <li>
+                    Shapes with an aspect ratio of about 1 are thrown into an array. (The encompassing quadrilateral of the circle is a square, and the aspect ratio of the square is 1.)
+                </li>
+                <li>
+                    The average of the radius and circumference of all the circles obtained is taken. With the help of the average environment, it will be possible The area of the average circle is calculated.
+                </li>
+                <li>
+                    Those whose radius is less than half of the average radius and two The process of filtering the ones larger than the floor takes place.
+                </li>
+                <li>
+                    The circles are traveled in groups of five. The number of pixels different (from black) of the average circle area If it is more than half, it is determined as marked with this chic.
+                </li>
+                <li>
+                    Each question; If the number of marked chic is different from one marked as false, and one with the answer key It is compared and action is taken according to the result.
+                </li>
+                <li>
+                    The color is determined according to whether the problem is true, blank or false and the answers are marked on the image and added to the disk Saved.
+                </li>
+                <li>Scores and papers are shown to the user.</li>
+            </ol>
+        </div>
+    </div>-->
+</div>
+
+{% endblock %}
